@@ -7,3 +7,4 @@
 -   npm i dotenv
 -   npm i joi
 -   npm i bcryptjs :ma hoa password
+-   npm i jsonwebtoken

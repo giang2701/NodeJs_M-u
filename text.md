@@ -7,6 +7,7 @@
 -   npm i dotenv
 -   npm i joi
 -   npm i bcryptjs :ma hoa password
+-   npm i jsonwebtoken
 
 !Chu y:
 Them (--experimental-specifier-resolution ) vao "start": "nodemon --experimental-specifier-resolution ./src/server.js" in package.json
