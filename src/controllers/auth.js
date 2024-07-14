@@ -73,7 +73,9 @@ export const singIn = async (req, res) => {
             });
         }
         // Bước 4: Tạo JWT
-        const accesstoken = await jwt.sign({ _id: user._id }, SECRET_CODE);
+        const accesstoken = await jwt.sign({ _id: user._id }, SECRET_CODE, {
+            expiresIn: "1d",
+        });
         // Bước 5: Trả thông báo cho người dùng đăng nhập thành công
         user.password = undefined;
         return res.status(200).json({

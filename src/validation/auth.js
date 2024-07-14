@@ -30,6 +30,7 @@ export const SingUp = Joi.object({
             "string.max": "confirmPassword phai co duoi nhat {#limit+1} ky tu",
             "any.only": "confirmPassword khong khop voi password",
         }),
+    role: Joi.string(),
 });
 
 // Dang Nhap

@@ -6,10 +6,11 @@ import {
     getDetail,
     update,
 } from "../controllers/product.js";
+import { checkPermission } from "../middlewares/checkPermission.js";
 const routerProduct = express.Router();
 routerProduct.get("/", getAll);
 routerProduct.get("/:id", getDetail);
-routerProduct.post("/", create);
-routerProduct.put("/:id", update);
-routerProduct.delete("/:id", deletepro);
+routerProduct.post("/", checkPermission, create);
+routerProduct.put("/:id", checkPermission, update);
+routerProduct.delete("/:id", checkPermission, deletepro);
 export default routerProduct;
